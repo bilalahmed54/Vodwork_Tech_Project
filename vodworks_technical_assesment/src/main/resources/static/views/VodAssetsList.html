@@ -1,0 +1,28 @@
+<div ng-controller="vodAssetsController as vm">
+
+    <div ng-repeat="asset in vm.assetsList" style="border: 1px solid">
+
+        <h2>
+            <u>{{$index + 1}}: {{asset.headline}}</u>
+        </h2>
+
+        <h3>Card Images</h3>
+        <div ng-repeat="cardImage in asset.cardImagesUrls">
+            <a href="{{cardImage}}">{{cardImage}}</a>
+        </div>
+
+        <h3>Key Art Images</h3>
+        <div ng-repeat="keyArtImage in asset.keyArtImagesUrls">
+            <a href="{{keyArtImage}}">{{keyArtImage}}</a>
+        </div>
+
+        <h3>Videos</h3>
+        <div ng-repeat="video in asset.videoUrls">
+            <a href="{{video}}">{{video}}</a>
+        </div>
+
+        <br>
+
+    </div>
+
+</div>
